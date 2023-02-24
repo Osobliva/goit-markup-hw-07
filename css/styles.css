@@ -361,10 +361,22 @@ img {
     gap: 48px 24px;
 }
 
-.cards-item {
-    flex-basis: calc(100% - (24px*2))/3;
+.cards-item{
+
+}
+@media screen and (min-width: 768px) {
+    .cards-item {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: calc((100% - (24px * 1)) / 2);
+    }
 }
 
+@media screen and (min-width: 1200px){
+    .cards-item {
+        flex-basis: calc((100% - (24px * 2)) / 3);
+    }
+}
 .cards-text{
     color: var(--primary-text-color);
 }
