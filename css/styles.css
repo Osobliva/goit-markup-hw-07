@@ -240,10 +240,7 @@ img {
 
   }
 /*Контакти*/
-/* .contacts {
-    display: flex;
-    gap: 40px;
-} */
+
 
 .contacts-container {
     margin-left: auto;
@@ -422,12 +419,8 @@ transform: shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
                 url(../images/people-office.jpg);
     
     background-color: var(--title-text-color);
-    padding-top: 59px;
-    
-    /* padding-top: 188px;
-    padding-bottom: 188px;
-    height: 600px; 
-    max-width: 1440px;*/
+    padding-top: 112px;
+    padding-bottom: 112px;
     
     margin-left: auto;
     margin-right: auto;
@@ -452,7 +445,8 @@ transform: shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   @media screen and (min-width: 768px) {
     .hero {
       height: 432px;
-      padding-top: 111px;
+      padding-top: 112px;
+      padding-bottom: 108px;
       background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hw7/bgi-tablet.jpg);
     }
   }
@@ -566,9 +560,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     position: absolute;
     top: 50%;
     left: 50%;
-
     width: 408px;
-    height: 576px;
     background-color: var(--modal-window);
     padding-top: 72px;
     padding-left: 24px;
@@ -577,6 +569,13 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px){
+   .modal{
+    width: 408px;
+    height: 576px;
+   } 
 }
 
 .btn-modal{
@@ -756,6 +755,9 @@ min-height: 56px;
       }
 
 .mobile-menu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
    position: fixed;
     top: 0;
     left: 0;
@@ -788,6 +790,7 @@ transform: translateX(0);
         display: flex;
         gap: 40px;
         padding-top: 40px;
+        margin-bottom: auto;
         flex-direction: column;
         align-items: flex-start; 
         
@@ -811,7 +814,7 @@ transform: translateX(0);
         gap: 40px;
         align-items: flex-start;
         margin-bottom: 48px;
-        margin-top: 284px;
+        /* margin-top: 284px; */
       } 
       
       .item-mob{
@@ -861,7 +864,6 @@ transform: translateX(0);
     
 .skills-list {
     display: flex;
-    /* flex-wrap: nowrap; */
     flex-flow: column;
     row-gap: 72px;
     justify-content: center;
@@ -1004,7 +1006,6 @@ transform: translateX(0);
 
 .team-foto {
     background-color: var(--primary-bg-collor);
-    /* flex-basis: calc(100% - (24px*3))/4; */
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
     
@@ -1142,7 +1143,8 @@ border: 1px solid var(--accent-color);
     .container.footer-page{
     text-align: start;
     flex-flow: wrap;
-    /* width: 532px; */
+    width: 768px;
+    padding-left: 108px;
     gap: 72px 24px;
     align-items: baseline;
     }
@@ -1151,14 +1153,18 @@ border: 1px solid var(--accent-color);
 @media screen and (min-width: 1200px) {
   
     .container.footer-page {
-      flex-flow: row;
-      text-align: start;
+      /* flex-flow: row;
+      text-align: start; */
+      display: flex;
+      flex-wrap: nowrap;
       gap: 120px;
+      width: 100%;
+    padding-left: 30px;
     }
 
     .text-page {
         color: rgba(231, 233, 252, 1);
-        max-width: 264px;
+        min-width: 264px;
         margin-top: 16px;
     }
   }
