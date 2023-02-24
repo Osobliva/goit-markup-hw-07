@@ -272,11 +272,29 @@ img {
 }
 .button {
     display: flex;
+    flex-wrap: wrap;
+    min-width: 265px;
     gap: 24px;
-    margin-bottom: 72px;
-    justify-content: center;
+    margin-bottom: 48px;
+    
 }
 
+@media screen and (min-width: 768px){
+    .button{
+    margin-bottom: 64px;
+    justify-content: center;
+    }
+   
+}
+
+@media screen and (min-width: 1200px){
+    .button {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 72px;
+        justify-content: center;
+    }
+}
 
 
 .btn {
